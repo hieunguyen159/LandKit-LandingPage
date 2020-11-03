@@ -1,0 +1,15 @@
+.brand-section {
+  padding: 3em 0;
+  background-color: #f5f5f5;
+}
+.brand-row {
+  display: flex;
+  justify-content: space-between;
+}
+.brand-text {
+  color: #869ab8 !important;
+}
+.brand-child {
+  flex: 1;
+  margin: 0 25px;
+}

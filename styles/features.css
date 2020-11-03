@@ -1,17 +1,15 @@
 .features-section {
-  padding: 165px 0;
-  border: 1px solid black;
+  padding: 20px 0;
 }
-.features-container {
-  margin: auto;
-}
+
 .features-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .features-child {
   flex: 1;
-  border: 1px solid black;
+  line-height: 30px;
+  margin: 0 30px;
 }

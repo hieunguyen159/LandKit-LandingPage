@@ -12,7 +12,8 @@ li {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #506693;
+  font-weight: 600;
 }
 .nav-bar-menu {
   flex: 2.5;

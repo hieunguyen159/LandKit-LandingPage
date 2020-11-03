@@ -1,0 +1,63 @@
+.about-section {
+  padding: 3rem 0;
+}
+
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-child {
+  margin: 0 20px;
+}
+.about-form {
+  flex: 4;
+}
+.about-card {
+  background-color: white;
+  border-radius: 8px;
+}
+.about-form-input {
+  padding: 20px;
+}
+.input-child {
+  padding: 10px;
+  border: none;
+  margin: 20px 5px;
+  font-size: 18px;
+  outline: none;
+}
+.about-des {
+  flex: 5;
+  line-height: 34px;
+  padding: 20px;
+  color: #506690;
+}
+::placeholder {
+  color: #506690;
+  font-family: "Questrial", sans-serif;
+}
+.download-button {
+  background-color: #42ba96;
+  color: white;
+  margin: 10px 5px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+.download-button a {
+  color: white;
+}
+
+.list-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #42ba96;
+}
+.list-row > * {
+  flex: 1 1 210px;
+}
+.list-child {
+  margin: 10px;
+}
