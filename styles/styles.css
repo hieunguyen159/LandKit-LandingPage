@@ -1,14 +1,6 @@
 body {
   font-family: "Questrial", sans-serif;
-  background-color: #eeeeee;
+  background-color: white;
   padding: 0;
   margin: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 155px;
 }

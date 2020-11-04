@@ -29,7 +29,7 @@
   <body>
     <!-- Navbar-->
     <nav class="nav-bar">
-      <div class="container">
+      <div class="nav-bar-container">
         <a class="nav-bar-brand">
           <img
             src="https://landkit.goodthemes.co/assets/img/brand.svg"
@@ -43,32 +43,41 @@
             <li class="nav-list-item"><a href="#">Account</a></li>
             <li class="nav-list-item"><a href="#">Documentation</a></li>
           </ul>
+          <a href="#" class="nav-button">Buy now</a>
         </div>
-        <a href="#" class="nav-button">Buy now</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </nav>
 
     <!-- Welcome -->
     <div class="welcome-section">
-      <div class="container">
+      <div class="welcome-container">
         <div class="welcome-row">
-          <div class="welcome-child">
-            <h1 class="welcome-title">Welcome to Landkit. Develop anything.</h1>
+          <div class="welcome-child welcome-des">
+            <h1 class="welcome-title">
+              Welcome to <span style="color: blue">Landkit</span> . Develop
+              anything.
+            </h1>
             <p class="welcome-description">
               Build a beautiful, modern website with flexible Bootstrap
               components built from scratch.
             </p>
-            <div class="welcome-button">
+            <div class="welcome-button-container">
               <a class="welcome-button welcome-button-primary" href="#"
-                >View all pages &nbsp;
-                <i class="fas fa-hand-point-right"></i>
+                >View all pages &nbsp; &nbsp; &nbsp;
+                <span class="right-icon">
+                  <i class="fas fa-hand-point-right"></i
+                ></span>
               </a>
               <a class="welcome-button welcome-button-default" href="#"
                 >Documentation</a
               >
             </div>
           </div>
-          <div class="welcome-child">
+          <div class="welcome-child welcome-image">
             <img
               alt=""
               class="welcome-img"
@@ -81,7 +90,7 @@
 
     <!-- Features -->
     <div class="features-section">
-      <div class="container">
+      <div class="features-container">
         <div class="features-row">
           <div class="features-child">
             <svg
@@ -172,7 +181,7 @@
 
     <!-- Brand -->
     <div class="brand-section">
-      <div class="container">
+      <div class="brand-container">
         <div class="brand-row">
           <div class="brand-child">
             <div class="brand-text">
@@ -270,7 +279,7 @@
 
     <!-- About -->
     <div class="about-section">
-      <div class="container">
+      <div class="about-container">
         <div class="about-row">
           <div class="about-form about-child">
             <div class="about-card">
@@ -329,7 +338,99 @@
             </div>
           </div>
         </div>
+        <div class="about-row">
+          <div class="about-child">
+            <h2 style="font-size: 30px; font-weight: 200">
+              We have lots of experience
+              <span style="color: blue">building Bootstrap themes</span> .
+            </h2>
+            <p style="color: #6c6b90">
+              We've built well over a dozen Bootstrap themes and sold tens of
+              thousands of copies.
+            </p>
+            <div class="about-flex">
+              <div class="list-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M12 8H8a4 4 0 00-4 4v1a3 3 0 003 3v2a5 5 0 01-5-5v-1a6 6 0 016-6h4V4.728a.5.5 0 01.8-.4l2.856 2.133a.5.5 0 01-.001.802l-2.857 2.121A.5.5 0 0112 8.983V8z"
+                      fill="#335EEA"
+                    ></path>
+                    <path
+                      d="M12.058 16H16a4 4 0 004-4v-1a3 3 0 00-3-3V6a5 5 0 015 5v1a6 6 0 01-6 6h-3.942v.983a.5.5 0 01-.798.401l-2.857-2.12a.5.5 0 010-.803l2.856-2.134a.5.5 0 01.8.401V16z"
+                      fill="#335EEA"
+                      opacity=".3"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="list-text">
+                <h4 style="font-size: 1.1875rem">
+                  Bootstrap users since the beginning
+                </h4>
+                <p>
+                  We've been developing with Bootstrap since it was publicly
+                  released in 2011.
+                </p>
+              </div>
+            </div>
+            <div class="about-flex">
+              <div class="list-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M17.272 8.685a1 1 0 111.456-1.37l4 4.25a1 1 0 010 1.37l-4 4.25a1 1 0 01-1.456-1.37l3.355-3.565-3.355-3.565zm-10.544 0L3.373 12.25l3.355 3.565a1 1 0 01-1.456 1.37l-4-4.25a1 1 0 010-1.37l4-4.25a1 1 0 011.456 1.37z"
+                      fill="#335EEA"
+                    ></path>
+                    <rect
+                      fill="#335EEA"
+                      opacity=".3"
+                      transform="rotate(15 12 12)"
+                      x="11"
+                      y="4"
+                      width="2"
+                      height="16"
+                      rx="1"
+                    ></rect>
+                  </g>
+                </svg>
+              </div>
+              <div class="list-text">
+                <h4 style="font-size: 1.1875rem">
+                  Deep understanding of Bootstrap
+                </h4>
+                <p>
+                  We've watched Bootstrap grow up over the years and understand
+                  it better than almost anyone.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="about-child">
+            <div class="kit-image">
+              <img
+                class="kit-img"
+                alt=""
+                src="https://landkit.goodthemes.co/assets/img/screenshots/desktop/dashkit.jpg"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Testimonial-->
   </body>
 </html>

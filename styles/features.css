@@ -1,3 +1,10 @@
+.features-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6.6vw;
+}
 .features-section {
   padding: 20px 0;
 }
@@ -12,4 +19,17 @@
   flex: 1;
   line-height: 30px;
   margin: 0 30px;
+}
+@media screen and (max-width: 767px) {
+  .features-row {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .features-child {
+    flex: 1;
+
+    line-height: 30px;
+    margin: 0 30px;
+  }
 }

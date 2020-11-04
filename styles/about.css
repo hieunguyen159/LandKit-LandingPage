@@ -1,14 +1,25 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2vh 6.6vw;
+}
 .about-section {
   padding: 3rem 0;
 }
 
 .about-row {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin: 2.5vh 0;
 }
 .about-child {
   margin: 0 20px;
+  flex: 1;
 }
 .about-form {
   flex: 4;
@@ -16,6 +27,7 @@
 .about-card {
   background-color: white;
   border-radius: 8px;
+  padding: 20px;
 }
 .about-form-input {
   padding: 20px;
@@ -28,7 +40,7 @@
   outline: none;
 }
 .about-des {
-  flex: 5;
+  flex: 4;
   line-height: 34px;
   padding: 20px;
   color: #506690;
@@ -60,4 +72,48 @@
 }
 .list-child {
   margin: 10px;
+}
+.list-icon {
+  padding-top: 20px;
+}
+.about-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.list-icon > svg {
+  width: 3rem;
+  height: 3rem;
+}
+.list-text {
+  margin-left: 1.5rem !important;
+}
+.icon > svg {
+  width: 3rem;
+  height: 3rem;
+}
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+.kit-image {
+  transform: skewX(-10deg) rotateY(-35deg) rotateX(15deg);
+  backface-visibility: hidden;
+}
+.kit-img {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .about-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about-form {
+    order: 2;
+  }
+  .about-des {
+    order: 1;
+  }
 }
