@@ -1,0 +1,30 @@
+.stat-section {
+  padding: 10vh 0;
+}
+.stat-container {
+  margin: 0 11vw;
+}
+.stat-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.stat-child {
+  flex: 1;
+}
+.stat-img {
+  width: 100%;
+}
+.statistic {
+  display: flex;
+}
+
+.stat-data {
+  width: 29%;
+}
+.vertical-slide {
+  width: 1%;
+  height: auto;
+  background-color: black;
+}
