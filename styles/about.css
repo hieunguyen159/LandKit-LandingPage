@@ -1,24 +1,28 @@
 .about-container {
   display: flex;
   flex-direction: column;
-  margin: 2vh 11vw;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 .about-section {
-  padding: 3rem 0;
+  width: 100%;
 }
 
 .about-row {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 2.5vh 0;
 }
 .about-child {
   margin: 0 20px;
-  width: 50%;
 }
 .about-form {
-  flex: 4;
+  flex: 5;
+  transition: transform 0.3s ease;
+}
+.about-form:hover {
+  transform: translateY(-10px);
 }
 .about-card {
   background-color: white;
@@ -32,11 +36,10 @@
   border: none;
   margin: 20px 5px;
   outline: none;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
 }
 .about-des {
-  flex: 4;
+  flex: 6;
   padding: 20px;
   color: #506690;
 }
@@ -57,24 +60,18 @@
 }
 
 .list-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   color: #42ba96;
 }
-.list-row > * {
-  flex: 1 1 210px;
-}
 .list-child {
-  margin: 10px;
+  margin: 15px 0;
 }
-.list-icon {
-  padding-top: 20px;
-}
+
 .about-flex {
   display: flex;
-  align-items: flex-start;
   justify-content: flex-start;
+  margin-bottom: 30px;
 }
 .list-icon > svg {
   width: 3rem;
@@ -91,27 +88,36 @@ svg {
   overflow: hidden;
   vertical-align: middle;
 }
+.about-child-2 {
+  flex: 1;
+}
 .kit-image {
   perspective: 1500px;
   perspective-origin: left center;
   transform-style: preserve-3d;
-  transform: scale(0.6, 0.6);
+  max-width: 100%;
+  min-width: 100px;
+  margin: 30px;
 }
 .kit-img {
+  width: 77%;
   transform: rotateY(-35deg) rotateX(15deg);
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .list-row {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 767px) {
   .about-row {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2.6vw;
+    justify-content: center;
   }
   .about-child {
     width: 100%;
-  }
-  .about-child h2 {
-    font-size: 4vw;
   }
   .about-form {
     order: 2;

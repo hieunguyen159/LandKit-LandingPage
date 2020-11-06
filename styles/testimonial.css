@@ -1,15 +1,19 @@
+.testimonial-section {
+  width: 100%;
+}
 .testimonial-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 0 11vw;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 .testimonial-row-1 {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin: 5vw 0;
 }
 .testimonial-row-2 {
   display: flex;
@@ -41,8 +45,9 @@
   color: red;
 }
 .testimonial-comment {
-  font-size: 2.5vw;
+  font-size: 1.6vw;
   letter-spacing: 1px;
+  line-height: 2rem;
 }
 
 @media screen and (max-width: 767px) {

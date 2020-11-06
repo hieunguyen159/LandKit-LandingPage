@@ -21,28 +21,25 @@ a .icon:hover {
 .nav-bar .icon {
   display: none;
 }
-.nav-bar-brand {
-  flex: 1;
-}
 li {
   list-style-type: none;
 }
-a {
+li.nav-list-item a {
   text-decoration: none;
   color: #506693;
   font-weight: 600;
 }
 .nav-bar-menu {
-  flex: 4;
-  padding: 0;
   display: flex;
+  flex-grow: 1;
+}
+.sub-menu {
+  display: none;
 }
 .nav-list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  padding: 0;
   margin-left: auto;
 }
 .nav-list-item {
@@ -56,16 +53,15 @@ a {
 .nav-button {
   border-radius: 6px;
   color: white;
-  margin: auto;
   border: 1px solid transparent;
-  background-color: blue;
-  vertical-align: baseline;
+  background-color: #335eea;
+  min-width: 80px;
   padding: 5px 15px;
-  bottom: 0;
-  transition: bottom 1s;
+  transition: transform 0.2s ease;
 }
 .nav-button:hover {
-  bottom: 5px;
+  transform: translateY(-2px);
+  background-color: blue;
 }
 
 @media screen and (max-width: 1024px) {

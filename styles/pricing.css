@@ -1,0 +1,42 @@
+.pricing-section {
+  width: 100%;
+}
+.pricing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.pricing-row {
+  display: flex;
+  justify-content: center;
+}
+.pricing-des {
+  text-align: center;
+  max-width: 60%;
+}
+.pricing-child {
+  border-radius: 6px;
+  flex: 1;
+  /* box-shadow: 2px 2px black; */
+  border: 1px solid black;
+}
+.far {
+  color: #68ba96;
+}
+.pricing-card {
+  text-align: center;
+  padding: 3vw 10vw;
+}
+.pricing-highlight {
+  background-color: #eaeffd;
+  border-radius: 6px;
+  color: blue;
+  font-weight: 600;
+}
+.pricing-price {
+  font-size: 4rem;
+}

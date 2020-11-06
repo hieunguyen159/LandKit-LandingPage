@@ -28,7 +28,7 @@
   </head>
   <body>
     <!-- Navbar-->
-    <nav class="nav-bar">
+    <nav class="nav-bar section">
       <div class="nav-bar-container">
         <a class="nav-bar-brand">
           <img
@@ -38,25 +38,33 @@
         </a>
         <div class="nav-bar-menu">
           <ul class="nav-list">
-            <li class="nav-list-item"><a href="#">Landings</a></li>
+            <li class="nav-list-item">
+              <a href="#">Landings</a>
+              <ul class="sub-menu">
+                <li><a href="#">Món ăn miền Bắc</a></li>
+                <li><a href="#">Món ăn miền Trung</a></li>
+                <li><a href="#">Món ăn miền Nam</a></li>
+                <li><a href="#">Ẩm thực đường phố</a></li>
+              </ul>
+            </li>
             <li class="nav-list-item"><a href="#">Pages</a></li>
             <li class="nav-list-item"><a href="#">Account</a></li>
             <li class="nav-list-item"><a href="#">Documentation</a></li>
           </ul>
-          <a href="#" class="nav-button">Buy now</a>
+          <a href="#" class="nav-list nav-button tranY-button">Buy now</a>
         </div>
 
-        <a href="#" class="icon" onclick="myFunction()">
+        <a href="#" class="icon">
           <i class="fa fa-bars"></i>
         </a>
       </div>
     </nav>
 
-    <!-- Welcome -->
-    <div class="welcome-section">
+    <!-- Welcome  (done) -->
+    <div class="welcome-section section">
       <div class="welcome-container">
         <div class="welcome-row">
-          <div class="welcome-child welcome-des">
+          <div class="welcome-child-1 welcome-des">
             <h1 class="welcome-title">
               Welcome to <span style="color: blue">Landkit</span> . Develop
               anything.
@@ -77,7 +85,7 @@
               >
             </div>
           </div>
-          <div class="welcome-child welcome-image">
+          <div class="welcome-child-2 welcome-image">
             <img
               alt=""
               class="welcome-img"
@@ -89,7 +97,7 @@
     </div>
 
     <!-- Features -->
-    <div class="features-section">
+    <div class="features-section section">
       <div class="features-container">
         <div class="features-row">
           <div class="features-child">
@@ -180,7 +188,7 @@
     </div>
 
     <!-- Brand -->
-    <div class="brand-section">
+    <div class="brand-section section">
       <div class="brand-container">
         <div class="brand-row">
           <div class="brand-child">
@@ -278,7 +286,7 @@
     </div>
 
     <!-- About -->
-    <div class="about-section">
+    <div class="about-section section">
       <div class="about-container">
         <div class="about-row">
           <div class="about-form about-child">
@@ -296,21 +304,21 @@
                 <input class="input-child" type="text" placeholder="Name" />
                 <input class="input-child" type="text" placeholder="Email" />
                 <input class="input-child" type="text" placeholder="Password" />
-                <div style="font-size: 1.3vw" class="download-button">
+                <div class="download-button">
                   <a href="">Download a sample</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="about-des about-child">
-            <h1 style="font-weight: 400; color: black; line-height: 5vw">
+            <h1 style="font-weight: 400; color: black">
               The most useful resource
 
               <span style="color: #42ba96; font-weight: 400"
                 >ever created for founders.</span
               >
             </h1>
-            <p style="line-height: 3vw">
+            <p>
               Using Landkit to build your site means never worrying about
               designing another page or cross browser compatibility. Our
               ever-growing library of components and pre-designed layouts will
@@ -337,7 +345,7 @@
           </div>
         </div>
         <div class="about-row">
-          <div class="about-child">
+          <div class="about-child-2">
             <h2 style="font-weight: 200">
               We have lots of experience
               <span style="color: blue">building Bootstrap themes</span> .
@@ -416,7 +424,7 @@
               </div>
             </div>
           </div>
-          <div class="about-child">
+          <div class="about-child-2">
             <div class="kit-image">
               <img
                 class="kit-img"
@@ -430,7 +438,7 @@
     </div>
 
     <!-- Testimonial-->
-    <div class="testimonial-section">
+    <div class="testimonial-section section">
       <div class="testimonial-container">
         <div class="testimonial-row-1">
           <div class="testimonial-text">
@@ -469,7 +477,7 @@
             </div>
             <div class="testimonial-comment">
               <blockquote>
-                <p>
+                <p style="margin-bottom: 10px">
                   “Landkit is hands down the most useful front end Bootstrap
                   theme I've ever used. I can't wait to use it again for my next
                   project.”
@@ -485,7 +493,7 @@
     </div>
 
     <!-- Stat -->
-    <div class="stat-section">
+    <div class="stat-section section">
       <div class="stat-container">
         <div class="stat-row">
           <div class="stat-child stat-des">
@@ -493,7 +501,7 @@
               Stay focused on your business.
               <span style="color: blue">Let us handle the design</span>
             </h2>
-            <p>
+            <p style="margin-bottom: 2rem; line-height: 2rem">
               You have a business to run. Stop worring about cross-browser bugs,
               designing new pages, keeping your components up to date. Let us do
               that for you.
@@ -504,9 +512,15 @@
                 <p>Satisfaction</p>
               </div>
               <div class="vertical-slide"></div>
-              <div class="stat-data"></div>
+              <div class="stat-data">
+                <h3>24/ 7</h3>
+                <p>Support</p>
+              </div>
               <div class="vertical-slide"></div>
-              <div class="stat-data"></div>
+              <div class="stat-data">
+                <h3>100k+</h3>
+                <p>Sales</p>
+              </div>
             </div>
           </div>
           <div class="stat-child stat-image">
@@ -516,6 +530,47 @@
               alt=""
             />
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-section section">
+      <div class="pricing-container">
+        <div class="pricing-row">
+          <div class="pricing-des">
+            <h1>Fair, simple pricing for all.</h1>
+            <p>
+              All types of businesses need access to development resources, so
+              we give you the option to decide how much you need to use.
+            </p>
+          </div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-child">
+            <div class="pricing-card">
+              <div class="pricing-highlight">STANDARD</div>
+              <div class="pricing-price">$ 29 /mo</div>
+              <p>per seat/p></p>
+              <div class="pricing-features">
+                <i class="far fa-check-circle"></i> &nbsp;Rich, responsive
+                landing pages
+              </div>
+              <div class="pricing-features">
+                <i class="far fa-check-circle"></i> &nbsp;100+ styled components
+              </div>
+              <div class="pricing-features">
+                <i class="far fa-check-circle"></i> &nbsp;Flexible, simple
+                license
+              </div>
+              <div class="pricing-features">
+                <i class="far fa-check-circle"></i> &nbsp;Speedy build tooling
+              </div>
+              <div class="pricing-features">
+                <i class="far fa-check-circle"></i> &nbsp;6 months free support
+                included
+              </div>
+            </div>
+          </div>
+          <div class="pricing-child"></div>
         </div>
       </div>
     </div>

@@ -1,8 +1,9 @@
 .stat-section {
-  padding: 10vh 0;
+  width: 100%;
 }
 .stat-container {
-  margin: 0 11vw;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .stat-row {
   display: flex;
@@ -14,17 +15,33 @@
   flex: 1;
 }
 .stat-img {
-  width: 100%;
+  max-width: 400px;
 }
 .statistic {
   display: flex;
+  justify-content: space-between;
 }
 
 .stat-data {
   width: 29%;
+  text-align: left;
 }
 .vertical-slide {
-  width: 1%;
+  width: 1px;
   height: auto;
-  background-color: black;
+  background-color: #d9e2ef;
+}
+@media screen and (max-width: 767px) {
+  .stat-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stat-img {
+    order: 1;
+  }
+  .stat-des {
+    order: 2;
+  }
 }
