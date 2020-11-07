@@ -1,7 +1,6 @@
 /* Nav bar styles */
 
 .nav-bar {
-  overflow: hidden;
   width: 100%;
   padding: 1.25rem 0;
 }
@@ -24,7 +23,7 @@ a .icon:hover {
 li {
   list-style-type: none;
 }
-li.nav-list-item a {
+.nav-list-item a {
   text-decoration: none;
   color: #506693;
   font-weight: 600;
@@ -43,12 +42,66 @@ li.nav-list-item a {
   margin-left: auto;
 }
 .nav-list-item {
-  font-size: 18px;
+  font-size: 16px;
   color: #506690;
-  margin: 0 20px;
+  padding: 5px 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
-.nav-list-item :hover {
+.nav-list-item a:hover {
   color: blue;
+}
+.landing {
+  position: absolute;
+  min-width: 42rem;
+  display: none;
+  opacity: 0;
+  transform: translateY(50px);
+  animation-name: menu;
+  animation-duration: 0.3s;
+  top: 25px;
+  z-index: 2;
+  border-radius: 6px;
+  box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.15);
+}
+.landing-row {
+  display: flex;
+}
+.content-left {
+  background: rgb(71, 106, 152);
+  background: linear-gradient(
+    30deg,
+    rgba(71, 106, 152, 1) 0%,
+    rgba(45, 59, 209, 1) 33%,
+    rgba(46, 76, 158, 1) 55%,
+    rgba(33, 56, 130, 1) 80%,
+    rgba(21, 54, 150, 1) 100%
+  );
+  text-align: center;
+  color: white;
+  padding: 3rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content-right {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.content-right-row {
+  display: flex;
+  justify-content: space-between;
+}
+.content-right-col a {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400 !important;
 }
 .nav-button {
   border-radius: 6px;
@@ -63,15 +116,24 @@ li.nav-list-item a {
   transform: translateY(-2px);
   background-color: blue;
 }
-
-@media screen and (max-width: 1024px) {
-  .nav-bar a.icon {
-    display: none;
-  }
+.btn-view-all-pages {
+  background: white;
+  padding: 13px;
+  min-width: 150px;
+  border-radius: 6px;
 }
+.nav-list-item:hover > .landing {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 @media screen and (max-width: 991px) {
   .nav-bar-brand {
     flex: 0;
+  }
+  .nav-bar a.icon {
+    display: none;
   }
   .nav-bar {
     overflow: hidden;
@@ -88,5 +150,16 @@ li.nav-list-item a {
     flex-direction: row;
     align-items: center;
     padding: 18px 20px;
+  }
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
