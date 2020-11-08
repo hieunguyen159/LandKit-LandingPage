@@ -40,3 +40,16 @@ h5 {
 .section {
   padding: 5rem 0;
 }
+/* @media (min-width: 768px) {
+  .nav-bar,
+  .welcome-section,
+  .features-section,
+  .brand-section,
+  .about-section,
+  .testimonial-section,
+  .stat-section,
+  .pricing-section,
+  .faq-section {
+    max-width: 720px;
+  }
+} */
