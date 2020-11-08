@@ -1,5 +1,10 @@
 /* Nav bar styles */
-
+li:hover {
+  cursor: pointer;
+}
+ul {
+  padding: 0;
+}
 .nav-bar {
   width: 100%;
   padding: 1.25rem 0;
@@ -32,9 +37,6 @@ li {
   display: flex;
   flex-grow: 1;
 }
-.sub-menu {
-  display: none;
-}
 .nav-list {
   display: flex;
   flex-direction: row;
@@ -44,7 +46,7 @@ li {
 .nav-list-item {
   font-size: 16px;
   color: #506690;
-  padding: 5px 30px;
+  padding: 15px 30px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -52,22 +54,26 @@ li {
 .nav-list-item a:hover {
   color: blue;
 }
-.landing {
+.sub-menu {
   position: absolute;
-  min-width: 42rem;
   display: none;
   opacity: 0;
+  background-color: white;
   transform: translateY(50px);
   animation-name: menu;
   animation-duration: 0.3s;
-  top: 25px;
+  top: 40px;
   z-index: 2;
   border-radius: 6px;
   box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.15);
 }
+.landing {
+  min-width: 42rem;
+}
 .landing-row {
   display: flex;
 }
+
 .content-left {
   background: rgb(71, 106, 152);
   background: linear-gradient(
@@ -91,7 +97,7 @@ li {
   flex: 1;
   padding: 30px;
   background-color: white;
-  line-height: 1.6;
+  line-height: 1.8;
   font-weight: 300;
 }
 .content-right-row {
@@ -103,13 +109,94 @@ li {
   flex-direction: column;
   font-weight: 400 !important;
 }
+.content-right-col h5 {
+  color: blue;
+}
+.pages {
+  min-width: 30rem;
+}
+.pages-row {
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+.pages-col {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8;
+}
+.pages-col a {
+  font-weight: 400 !important;
+}
+.pages-col h5 {
+  color: blue;
+}
+.account {
+  width: 15rem;
+  background-color: white;
+  padding: 5px;
+}
+.account ul {
+  position: absolute;
+  min-width: 15rem;
+  animation-name: menu;
+  animation-duration: 0.3s;
+}
+.account-list {
+  position: relative;
+}
+.account-list:hover > ul {
+  display: block;
+}
+.account ul {
+  left: 14.5rem;
+  top: -5px;
+  background-color: white;
+  box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.15);
+  display: none;
+  z-index: 3;
+  padding: 10px;
+}
+.account ul li {
+  padding: 10px;
+}
+.documentation {
+  min-width: 20rem;
+}
+
+.documentation-row {
+  display: flex;
+  padding: 15px 10px;
+}
+.documentation-col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+.documentation-col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 5;
+}
+.documentation-col-2 h5 {
+  margin: 0;
+  color: blue;
+}
+.documentation-col-2 p {
+  margin: 0;
+  font-size: 0.925rem;
+}
+.account {
+  min-width: 10rem;
+}
 .nav-button {
   border-radius: 6px;
   color: white;
   border: 1px solid transparent;
   background-color: #335eea;
-  min-width: 80px;
-  padding: 5px 15px;
+  padding: 15px;
   transition: transform 0.2s ease;
 }
 .nav-button:hover {
@@ -122,7 +209,7 @@ li {
   min-width: 150px;
   border-radius: 6px;
 }
-.nav-list-item:hover > .landing {
+.nav-list-item:hover > .sub-menu {
   display: block;
   opacity: 1;
   transform: translateY(0px);

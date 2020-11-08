@@ -1,0 +1,11 @@
+.dark-section {
+  position: absolute;
+  color: #1b2a4e;
+  margin-top: 30rem;
+  width: 100%;
+  z-index: -1;
+}
+.dark-background {
+  background-color: #1b2a4e;
+  height: 300rem;
+}
