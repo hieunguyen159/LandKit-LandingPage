@@ -1,9 +1,6 @@
 .pricing-section {
   width: 100%;
 }
-.section {
-  padding-bottom: 0 !important;
-}
 .pricing-container {
   display: flex;
   flex-direction: column;
