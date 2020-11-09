@@ -12,6 +12,7 @@
 .about-row {
   display: flex;
   flex-direction: row;
+  margin-bottom: 7rem;
   align-items: center;
 }
 .about-child {

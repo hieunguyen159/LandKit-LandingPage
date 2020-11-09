@@ -19,6 +19,7 @@
   display: flex;
   text-align: center;
   background-color: white;
+  box-shadow: 10px 10px 5px -1px rgba(224, 217, 224, 1);
   position: relative;
 }
 .testimonial-button {
