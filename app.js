@@ -130,7 +130,6 @@ validateButton.addEventListener("click", validate);
 inputs.forEach((input) =>
   input.addEventListener("keypress", (e) => {
     if (e.keyCode === 13) validate();
-    console.log(e.keyCode);
   })
 );
 //Navbar Toggle
