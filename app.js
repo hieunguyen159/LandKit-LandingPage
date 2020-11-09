@@ -2,6 +2,7 @@ const validateButton = document.querySelector(".download-button");
 const toggleButton = document.getElementById("responsive-button-navbar");
 const preButton = document.getElementById("pre-button");
 const nextButton = document.getElementById("next-button");
+const inputs = document.querySelectorAll(".input-child");
 //Display responsive Nav-Bar
 const toggleNavBar = () => {
   const line1 = document.querySelector(".line-1");
@@ -126,6 +127,12 @@ const showSlide = () => {
 };
 //Validate Form
 validateButton.addEventListener("click", validate);
+inputs.forEach((input) =>
+  input.addEventListener("keypress", (e) => {
+    if (e.keyCode === 13) validate();
+    console.log(e.keyCode);
+  })
+);
 //Navbar Toggle
 toggleButton.addEventListener("click", toggleNavBar);
 //sliding
