@@ -22,6 +22,13 @@
   box-shadow: 10px 10px 5px -1px rgba(224, 217, 224, 1);
   position: relative;
 }
+
+.loaded {
+  animation: displayImg 2s normal forwards;
+}
+.preloaded {
+  animation: displayImg1 2s normal forwards;
+}
 .testimonial-button {
   position: absolute;
   height: 60px;
@@ -104,6 +111,14 @@
 }
 
 @keyframes displayImg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes displayImg1 {
   0% {
     opacity: 0;
   }

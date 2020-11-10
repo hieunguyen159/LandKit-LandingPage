@@ -262,9 +262,6 @@ li {
     flex: 0;
   }
   .nav-bar a.icon {
-    display: none;
-  }
-  .nav-bar a.icon {
     display: block;
   }
   .nav-bar-menu {

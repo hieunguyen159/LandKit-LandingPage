@@ -57,6 +57,9 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.download-button[disabled] {
+  opacity: 0.2;
+}
 .download-button a {
   color: white;
 }
@@ -65,6 +68,18 @@
   color: Red;
   margin-left: 15px;
   display: none;
+}
+.validate-success {
+  color: green;
+  margin-left: 35%;
+  display: none;
+  text-align: center;
+}
+.validate-fail {
+  color: red;
+  display: none;
+  margin-left: 35%;
+  text-align: center;
 }
 .list-row {
   display: grid;
