@@ -74,42 +74,44 @@ $(document).ready(() => {
   });
 
   //Slide Show
-  const showSlide = () => {
-    const arr = [
-      {
-        imageSrc: "https://landkit.goodthemes.co/assets/img/photos/photo-1.jpg",
-        iconTitle:
-          "https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png",
-        comment:
-          "Landkit is hands down the most useful front end Bootstrap theme I have ever used. I can not wait to use it again for my next project.",
-        footer: "Dave Gamache",
-      },
-      {
-        imageSrc:
-          "https://landkit.goodthemes.co/assets/img/photos/photo-26.jpg",
-        iconTitle:
-          "https://www.pngitem.com/pimgs/m/108-1087591_instagram-text-png-instagram-logo-png-horizontal-transparent.png",
-        comment:
-          "        I've never used a theme as versatile and flexible as Landkit. It's my go to for building landing sites on almost any project.",
+  var i = 0;
+  const arr = [
+    {
+      imageSrc: "https://landkit.goodthemes.co/assets/img/photos/photo-1.jpg",
+      iconTitle:
+        "https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png",
+      comment:
+        "Landkit is hands down the most useful front end Bootstrap theme I have ever used. I can not wait to use it again for my next project.",
+      footer: "Dave Gamache",
+    },
+    {
+      imageSrc: "https://landkit.goodthemes.co/assets/img/photos/photo-26.jpg",
+      iconTitle:
+        "https://www.pngitem.com/pimgs/m/108-1087591_instagram-text-png-instagram-logo-png-horizontal-transparent.png",
+      comment:
+        "        I've never used a theme as versatile and flexible as Landkit. It's my go to for building landing sites on almost any project.",
 
-        footer: "Rus D'SA",
-      },
-      {
-        imageSrc:
-          "https://landkit.goodthemes.co/assets/img/photos/photo-26.jpg",
-        iconTitle:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Facebook_Logo_%282019%29.svg/1280px-Facebook_Logo_%282019%29.svg.png",
-        comment:
-          "        I've never used a theme as versatile and flexible as Landkit. It's my go to for building landing sites on almost any project.",
+      footer: "Rus D'SA",
+    },
+    {
+      imageSrc: "https://landkit.goodthemes.co/assets/img/photos/photo-26.jpg",
+      iconTitle:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Facebook_Logo_%282019%29.svg/1280px-Facebook_Logo_%282019%29.svg.png",
+      comment:
+        "        I've never used a theme as versatile and flexible as Landkit. It's my go to for building landing sites on almost any project.",
 
-        footer: "dsadsadsa",
-      },
-    ];
-    var i = 0;
+      footer: "dsadsadsa",
+    },
+  ];
+  const showSlide = (i) => {
     $("#imageSrc").attr("src", arr[i].imageSrc);
     $("#headerImageSrc").attr("src", arr[i].iconTitle);
     $("#testimonial-comment").html(arr[i].comment);
     $("#comment-footer").html(arr[i].footer);
+    $(".testimonial-row-2").toggleClass(function () {
+      return $(this).is(".loaded, .preloaded") ? "loaded preloaded" : "loaded";
+    });
+
     $("#pre-button").click(() => {
       if (i > 0) {
         i--;
@@ -143,5 +145,48 @@ $(document).ready(() => {
       $("#comment-footer").html(arr[i].footer);
     });
   };
-  showSlide();
+  setInterval(() => {
+    if (i < arr.length - 1) {
+      i++;
+    } else {
+      i = 0;
+    }
+    showSlide(i);
+  }, 2000);
+
+  //type texting animation
+  var a = 0;
+  var stringArr = ["designers.", "founders.", "developers."];
+  function typeWriter(string) {
+    console.log(string);
+    return new Promise((resolve, reject) => {
+      var x = 0;
+      var result = "";
+      //type text
+      function type(s) {
+        if (x < s.length) {
+          result += s.charAt(x);
+          $(".texting").html(result);
+          x++;
+          setTimeout(() => type(s), 200);
+        } else resolve();
+      }
+      type(string);
+    });
+  }
+  var index = 0;
+  const loop = async () => {
+    if (index < stringArr.length) {
+      const str = stringArr[index];
+      await typeWriter(str);
+      setTimeout(() => {
+        index++;
+        loop();
+      }, 2000);
+    } else {
+      index = 0;
+      loop();
+    }
+  };
+  loop();
 });

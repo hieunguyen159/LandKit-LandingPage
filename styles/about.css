@@ -20,14 +20,16 @@
 }
 .about-form {
   flex: 5;
-  transition: transform 0.3s ease;
+  animation: transXLeft 1.5s ease;
 }
-.about-form:hover {
-  transform: translateY(-10px);
-}
+
 .about-card {
   background-color: white;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.about-card:hover {
+  transform: translateY(-10px);
 }
 .about-form-input {
   padding: 30px;
@@ -43,6 +45,14 @@
   flex: 6;
   padding: 20px;
   color: #506690;
+  animation: transXRight 1.8s ease;
+}
+.left {
+  animation: transXLeft 1.5s ease;
+  padding: 0 20px;
+}
+.right {
+  animation: transXRight 1.6s ease;
 }
 ::placeholder {
   color: #506690;
@@ -121,8 +131,17 @@ svg {
   min-width: 100px;
   margin: 30px;
 }
+.span-text {
+  font-size: 2rem;
+  color: #42ba96;
+  font-weight: 400;
+  display: block;
+}
+.texting {
+  border-right: 2px solid #42ba96;
+}
 .kit-img {
-  width: 77%;
+  width: 100%;
   transform: rotateY(-35deg) rotateX(15deg);
 }
 @media screen and (min-width: 767px) and (max-width: 991px) {
@@ -146,5 +165,25 @@ svg {
   }
   .about-des {
     order: 1;
+  }
+}
+@keyframes transXLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes transXRight {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

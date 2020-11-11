@@ -16,6 +16,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  animation: transY 1.5s ease;
 }
 .features-child {
   flex: 1;
@@ -32,5 +33,15 @@
 
     line-height: 30px;
     margin: 0 30px;
+  }
+}
+@keyframes transY {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

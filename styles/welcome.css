@@ -21,9 +21,22 @@
 }
 .welcome-child-1 {
   flex: 1;
+  animation: transY 1s ease;
 }
+@keyframes transY {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .welcome-child-2 {
   flex: 1;
+  animation: transY 0.8s ease;
 }
 .welcome-title {
   line-height: 1.2;
